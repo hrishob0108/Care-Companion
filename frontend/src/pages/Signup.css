@@ -1,0 +1,189 @@
+/* ───────────────────────────────
+   BACKGROUND + CONTAINER
+────────────────────────────────── */
+.signup-container {
+  min-height: 100vh;
+  /* use local asset for a themed background */
+  background: linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.55)), url('../assets/bg-medical.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating shapes removed — background handled by image */
+
+/* ───────────────────────────────
+   SIGNUP CARD
+────────────────────────────────── */
+.signup-card {
+  width: 380px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 35px 30px;
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  position: relative;
+  z-index: 10;
+}
+
+/* ───────────────────────────────
+   LOGO AREA
+────────────────────────────────── */
+.signup-logo {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.signup-logo img {
+  width: 65px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.signup-logo h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 10px 0 5px 0;
+}
+
+.signup-logo p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ───────────────────────────────
+   INPUT FIELDS
+────────────────────────────────── */
+.input-group {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #10b981;
+  font-size: 16px;
+  z-index: 2;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 11px 12px 11px 42px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  font-size: 14px;
+  color: #1f2937;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-group input::placeholder {
+  color: #9ca3af;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+  background: #f0fdf4;
+}
+
+/* ───────────────────────────────
+   BUTTON
+────────────────────────────────── */
+.signup-btn {
+  width: 100%;
+  padding: 12px;
+  /* change the button background to a black gradient */
+  background: linear-gradient(135deg, #000000 0%, #434343 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+.signup-btn:active {
+  transform: translateY(0);
+}
+
+/* ───────────────────────────────
+   FOOTER TEXT
+────────────────────────────────── */
+.login-text {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.login-text a {
+  color: #10b981;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.login-text a:hover {
+  color: #059669;
+  text-decoration: underline;
+}
+
+/* ───────────────────────────────
+   RESPONSIVE
+────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .signup-card {
+    width: 95%;
+    padding: 25px 20px;
+  }
+
+  .signup-logo h2 {
+    font-size: 22px;
+  }
+
+  /* shapes removed */
+}
+
+@media (max-width: 320px) {
+  .signup-card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .signup-logo img {
+    width: 55px;
+  }
+
+  .signup-logo h2 {
+    font-size: 20px;
+  }
+
+  .input-group input,
+  .input-group select {
+    font-size: 13px;
+    padding: 10px 10px 10px 38px;
+  }
+}
