@@ -1,0 +1,180 @@
+.addp-root {
+  min-height: 100vh;
+  background: #f5f6f8;
+  padding: 30px 20px;
+}
+
+/* Updated styling for cleaner layout and better spacing */
+.addp-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #374151;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.1);
+  transition: 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #eef0f3;
+}
+
+.addp-header h2 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #111827;
+}
+
+.addp-card {
+  max-width: 780px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 32px 28px;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+}
+
+.addp-title {
+  font-size: 18px;
+  margin: 26px 0 12px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #334155;
+  font-weight: 500;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.field-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #059669;
+  font-size: 16px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 16px 12px 42px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #1f2937;
+  outline: none;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16,185,129,0.2);
+  background: #f0fdf4;
+}
+/* MEDICATION BOX */
+.med-box {
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 14px;
+}
+
+.med-row {
+  display: flex;
+  flex-direction: column; /* Stack inputs vertically */
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.med-row input,
+.med-row select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.schedule-row {
+  display: flex;
+  flex-direction: column; /* Stack the select and input vertically */
+  gap: 8px;
+}
+
+.schedule-row select,
+.schedule-row input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+/* For better alignment of the select boxes */
+select {
+  max-width: 160px;
+}
+
+.add-med-btn {
+  margin-top: 8px;
+  background: #16a34a;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.add-med-btn:hover {
+  background: #15803d;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+  margin-top: 24px;
+  width: 100%;
+  background: #111827;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.submit-btn:hover {
+  background: #000000;
+}

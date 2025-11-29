@@ -1,0 +1,210 @@
+.elderly-dash-root {
+  background: #f3f4f6;
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.elderly-dash-nav {
+  background: #ffffff;
+  padding: 18px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.elderly-dash-nav h1 {
+  font-size: 24px;
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  margin-left: 20px;
+}
+
+.elderly-dash-content {
+  margin-top: 40px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.empty-box {
+  background: #ffffff;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.empty-icon {
+  font-size: 48px;
+  color: #999;
+}
+
+.medication-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.medication-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.schedule-item svg {
+  margin-right: 10px;
+}
+
+/* Add these to your existing ElderDashboard.css */
+
+.hero-panel {
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+  padding: 18px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.panel-header {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.panel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.panel-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius-lg);
+  background: #f9fafb;
+  transition: all 0.2s ease;
+}
+
+.panel-item:hover {
+  background: #f3f4f6;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.dot-green {
+  background: #16a34a;
+}
+
+.dot-amber {
+  background: #f59e0b;
+}
+
+.dot-red {
+  background: #dc2626;
+}
+
+.dot-gray {
+  background: #9ca3af;
+}
+
+.item-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.item-meta {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.item-status {
+  margin-left: auto;
+  font-size: 11px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.item-status.ok {
+  color: #15803d;
+  background: rgba(34, 197, 94, 0.1);
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.item-status.wait {
+  color: #92400e;
+  background: rgba(245, 158, 11, 0.1);
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.item-status.missed {
+  color: #dc2626;
+  background: rgba(220, 38, 38, 0.1);
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.item-status.scheduled {
+  color: #374151;
+  background: rgba(156, 163, 175, 0.1);
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.panel-footer {
+  font-size: 11px;
+  color: #9ca3af;
+  padding-top: 8px;
+  border-top: 1px solid rgba(226, 232, 240, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sync-icon {
+  font-size: 10px;
+}
+
+/* Ensure the main content has proper spacing */
+.elderly-dash-content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.elderly-dash-content h2 {
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
