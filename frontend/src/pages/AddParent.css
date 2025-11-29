@@ -98,6 +98,7 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(16,185,129,0.2);
   background: #f0fdf4;
 }
+
 /* MEDICATION BOX */
 .med-box {
   background: #f9fafb;
@@ -109,36 +110,8 @@ select:focus {
 
 .med-row {
   display: flex;
-  flex-direction: column; /* Stack inputs vertically */
   gap: 12px;
   margin-bottom: 10px;
-}
-
-.med-row input,
-.med-row select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-}
-
-.schedule-row {
-  display: flex;
-  flex-direction: column; /* Stack the select and input vertically */
-  gap: 8px;
-}
-
-.schedule-row select,
-.schedule-row input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-}
-
-/* For better alignment of the select boxes */
-select {
-  max-width: 160px;
 }
 
 .add-med-btn {

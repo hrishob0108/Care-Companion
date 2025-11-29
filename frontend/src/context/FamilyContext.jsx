@@ -1,9 +1,8 @@
-/* eslint-disable react-refresh/only-export-components */
 // src/context/FamilyContext.jsx
 import React, { createContext, useEffect, useState } from "react";
 
 // simple id generator (replace with uuid if you prefer)
-const makeId = () => `${Date.now()}-${Math.floor(Math.random() * 9000)}`;
+const makeId = () => `${Date.now()}-${Math.floor(Math.random()*9000)}`;
 
 export const FamilyContext = createContext();
 
@@ -20,9 +19,7 @@ export function FamilyProvider({ children }) {
   useEffect(() => {
     try {
       localStorage.setItem("cc_family", JSON.stringify(familyMembers));
-    } catch {
-      console.log("Failed to save family members to localStorage");
-    }
+    } catch {}
   }, [familyMembers]);
 
   const addMember = (member) => {
@@ -32,9 +29,7 @@ export function FamilyProvider({ children }) {
   };
 
   const updateMember = (id, patch) => {
-    setFamilyMembers((s) =>
-      s.map((m) => (m.id === id ? { ...m, ...patch } : m))
-    );
+    setFamilyMembers((s) => s.map((m) => (m.id === id ? { ...m, ...patch } : m)));
   };
 
   const removeMember = (id) => {
@@ -45,13 +40,7 @@ export function FamilyProvider({ children }) {
 
   return (
     <FamilyContext.Provider
-      value={{
-        familyMembers,
-        addMember,
-        updateMember,
-        removeMember,
-        getMember,
-      }}
+      value={{ familyMembers, addMember, updateMember, removeMember, getMember }}
     >
       {children}
     </FamilyContext.Provider>
