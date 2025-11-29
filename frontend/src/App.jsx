@@ -10,6 +10,28 @@ import AddParent from "./pages/AddParent.jsx";
 import { FamilyProvider } from "./context/FamilyContext";
 
 function App() {
+  const [userRole, setUserRole] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const role = localStorage.getItem("role");
+    if (role) {
+      setUserRole(role);
+    }
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  const ProtectedRoute = ({ children, role }) => {
+    if (userRole !== role) {
+      return <Navigate to='/' replace />;
+    }
+    return children;
+  };
+
   return (
     <FamilyProvider>
       <Routes>
